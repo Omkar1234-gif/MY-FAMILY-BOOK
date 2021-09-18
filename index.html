@@ -1,0 +1,39 @@
+<html>
+<head>
+<title>My Family Book</title>
+
+</head>
+
+<body>
+    <center style="margin-top: 40px;">
+<h1>My Family Book</h1>
+<img id="image" src="https://images-na.ssl-images-amazon.com/images/I/51KNpAKei-L.jpg" style="width: 30%;">
+<h4 id="name"></h4>
+<button type="button" onclick="nextslide()">Next</button>
+</center>
+</body>
+
+<script>
+var images=["https://images-na.ssl-images-amazon.com/images/I/51KNpAKei-L.jpg",
+"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQN1KvRJM6KNlpqg3A3OFgwy1WvDLkORY8Gtg&usqp=CAU", 
+"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTffNxSZOhrIIoo1HSyzpxeKTi5TyRxqCOTxA&usqp=CAU",
+"https://thumbs.dreamstime.com/b/happy-cute-kid-boy-pose-as-model-vector-164555488.jpg"
+];
+
+var names=["Family Book", "Kaushik Ghoshal, my father", "Meghna Ghoshal, my mother", "And that's me, Omkar Ghoshal"];
+
+var i=0;
+function nextslide() {
+i++;
+var number_of_family_members_in_array=3;
+if(i > number_of_family_members_in_array)
+{
+    i=0;
+}
+var updatedImage=images[i];
+var updatedName=names[i];
+document.getElementById("image").src=updatedImage;
+document.getElementById("name").innerHTML=updatedName;
+}
+</script>
+</html>
